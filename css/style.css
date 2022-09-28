@@ -1,12 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
 }
 
 .padre {
     width: 100vw;
     height: 100vh;
-    background-image: linear-gradient(rgba(240, 79, 39, 0.8), rgba(238, 145, 39, 0.8)), url(../static/img/cool-background.png);
+    /* background-image: url(../static/img/cool-background.png); */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -14,48 +17,54 @@
 
 nav {
     display: flex;
-    height: 10vh;
+    height: 7vh;
     width: 100%;
-    margin: auto;
-    padding: 35px 0;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    list-style: none;
-    display: inline-flex;
-    margin: 0 20px;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 nav img {
-    margin-left: 0.8rem;
-    width: 4rem;
-    border-radius: 10rem;
+    margin-left: 1rem;
+    max-width: 3.8rem ;
 }
 
-nav ul li a {
-    font-size: 1.2rem;
-    text-decoration: none;
-    color: black;
+.menu-horizontal{
+	list-style: none;
+	display: flex;
+	justify-content: space-around;
 }
 
-nav ul li ul {
-    display: none;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 0.8);
-    min-width: 5rem;
-    margin-top: 3.2rem;
-    padding: 0.4rem 0.4rem;
+.menu-horizontal > li > a{
+	display: block;
+	padding: 1.8rem 2rem;
+	color: white;
+	text-decoration: none;
 }
 
-nav ul .item2:hover .menu-desplegable {
-    display: block;
+.menu-horizontal > li:hover{
+	background-color: red;
+}
+
+.menu-vertical{
+	position: absolute;
+	display: none;
+	list-style: none;
+    padding: 0;
+	width: 8.39rem;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.menu-horizontal li:hover .menu-vertical{
+	display: block;
+}
+.menu-vertical li:hover{
+	background-color: black;
+}
+
+.menu-vertical li a{
+	display: block;
+	color: white;
+	text-decoration: none;
+	padding: 1.8rem 1.8rem 1.8rem 2rem;
 }
