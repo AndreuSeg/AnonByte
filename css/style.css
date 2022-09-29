@@ -9,23 +9,21 @@
 .padre {
     width: 100vw;
     height: 100vh;
-    /* background-image: url(../static/img/cool-background.png); */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+	background: rgb(255,255,255);
+	background: linear-gradient(180deg, rgba(255,255,255,1) 25%, rgba(96,164,235,1) 75%, rgba(19,107,235,1) 100%);
 }
 
 nav {
     display: flex;
-    height: 7vh;
+	flex-direction: column;
+    height: 8.8vh;
     width: 100%;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
 nav img {
-    margin-left: 1rem;
+	margin-top: 0.5rem;
     max-width: 3.8rem ;
 }
 
@@ -37,8 +35,8 @@ nav img {
 
 .menu-horizontal > li > a{
 	display: block;
-	padding: 1.8rem 2rem;
-	color: white;
+	padding: 0.5rem 2rem;
+	color: black;
 	text-decoration: none;
 }
 
@@ -51,20 +49,18 @@ nav img {
 	display: none;
 	list-style: none;
     padding: 0;
-	width: 8.39rem;
-	background-color: rgba(0, 0, 0, 0.5);
 }
 
 .menu-horizontal li:hover .menu-vertical{
 	display: block;
 }
 .menu-vertical li:hover{
-	background-color: black;
+	background-color: bisque;
 }
 
 .menu-vertical li a{
 	display: block;
-	color: white;
+	color: black;
 	text-decoration: none;
-	padding: 1.8rem 1.8rem 1.8rem 2rem;
+	padding: 1rem;
 }
