@@ -5,4 +5,4 @@
         <?php include("include/navbar.php"); ?>
     </div>
 
-<?php include("include/footer.php"); ?>
+    <?php include("include/footer.php"); ?>
