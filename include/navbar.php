@@ -1,5 +1,7 @@
 <nav>
-    <img src="./static/img/logo.png" alt="logo">
+    <a href="../index.php">
+        <img src="./static/img/logo.png" alt="logo">
+    </a>
     <ul class="menu-horizontal">
         <li><a href="./index.php">Home</a></li>
         <li><a href="./index.php">Servicios <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">
@@ -12,9 +14,9 @@
                 <li><a href="./index.php">Pack 4</a></li>
             </ul>
         </li>
-        <li><a href="./quienes_somos.php">¿Quienes somos?</a></li>
-        <li><a href="./contacto.php">Contacto</a></li>
-        <li><a href="./iniciar_sesion.php">Iniciar sesion</a></li>
-        <li><a href="./registrarse.php">Registrase</a></li>
+        <li><a href="./about_us.php">¿Quienes somos?</a></li>
+        <li><a href="./contact.php">Contacto</a></li>
+        <li><a href="./login.php">Iniciar sesion</a></li>
+        <li><a href="./register.php">Registrase</a></li>
     </ul>
 </nav>

@@ -6,16 +6,16 @@ $error = null;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["name"]) || empty($_POST["lastname"]) || empty($_POST["email"]) || empty($_POST["password"])) {
-        $error = "Rellena todos los campos.";
+        $error = "Please fill all the fileds.";
     } else if (!str_contains($_POST["email"], "@")) {
-        $error = "Formato email incorrecto.";
+        $error = "Email format is incorrect.";
     } else {
         $statement = $conn->prepare("SELECT * FROM users WHERE email = :email");
         $statement->bindParam(":email", $_POST["email"]);
         $statement->execute();
 
         if ($statement->rowCount() > 0) {
-            $error = "Hay alguien registrado con este email.";
+            $error = "Invalid credentials.";
         } else {
             $conn
                 ->prepare("INSERT INTO users (name, lastname, email, password) VALUES (:name, :lastname, :email, :password)")
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             session_start();
             $_SESSION["user"] = $user;
 
-            header("Location: index.php");
+            header("Location: login.php");
         }
     }
 }
@@ -44,12 +44,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
     <nav>
-        <img src="./static/img/logo.png" alt="logo">
+        <a href="./index.php">
+            <img src="./static/img/logo.png" alt="logo">
+        </a>
     </nav>
     <div class="padre">
-        <div class="registro">
+        <div class="register">
             <h1>Registrate en <span>AnonByte</span></h1>
-            <form class="section-inputs" action="./registrarse.php" method="POST">
+            <form class="section-inputs" action="./register.php" method="POST">
                 <label for="name">
                     <span>Name</span>
                     <input type="text" name="name" id="name" type="text" autofocus>
@@ -66,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <span>Password</span>
                     <input type="password" name="password" id="password" type="password" autofocus>
                 </label>
-                <button type="submit">Crear Cuenta</button>
+                <button type="submit">Crear cuenta</button>
             </form>
         </div>
     </div>

@@ -69,8 +69,8 @@ nav img {
 }
 /* Hasta aqui esta estilado del index */
 
-/* Empieza estilar pagina de registro */
-.registro {
+/* Empieza el estilado de la pagina de register*/
+.register {
 	width: 100vw;
 	display: flex;
 	margin-top: 10rem;
@@ -78,11 +78,11 @@ nav img {
 	align-items: center;
 }
 
-.registro>h1 {
+.register>h1 {
 	overflow-y: hidden;
 }
 
-.registro>h1>span {
+.register>h1>span {
 	color: blue;
 	font-weight: bold;
 }
@@ -100,4 +100,37 @@ nav img {
 	margin-top: 2rem;
 	max-width: 10rem;
 }
-/* Acaba el estilado de la pagina de registros */
+/* Acaba el estilado de la pagina de register */
+
+/* Empieza el estilado de la pagina de login */
+.login {
+	width: 100vw;
+	display: flex;
+	margin-top: 10rem;
+	flex-direction: column;
+	align-items: center;
+}
+
+.login>h1 {
+	overflow-y: hidden;
+}
+
+.login>h1>span {
+	color: blue;
+	font-weight: bold;
+}
+
+.section-inputs {
+	display: flex;
+	flex-direction: column;
+}
+
+.section-inputs>label>input {
+	display: block;
+}
+
+.section-inputs>button {
+	margin-top: 2rem;
+	max-width: 10rem;
+}
+/* Acaba el estilado de la pagina de login */
