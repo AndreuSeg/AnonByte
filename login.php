@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <span>Password</span>
                     <input type="password" name="password" id="password" type="password" autofocus>
                 </label>
-                <button type="submit">Iniciar sesion</button>
+                <button type="submit" class="submit-btn">Iniciar sesion</button>
             </form>
         </div>
     </div>

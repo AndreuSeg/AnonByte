@@ -4,13 +4,11 @@
 	margin: 0;
 	padding: 0;
 	font-family: 'Poppins', sans-serif;
-	overflow-x: hidden;
 }
 
 .padre {
-	display: flex;
-	width: 100vw;
 	height: 100vh;
+	display: flex;
 	background: rgb(255, 255, 255);
 	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 25%, rgba(96, 164, 235, 1) 75%, rgba(19, 107, 235, 1) 100%);
 }
@@ -67,19 +65,16 @@ nav img {
 	text-decoration: none;
 	padding: 1rem;
 }
+
 /* Hasta aqui esta estilado del index */
 
 /* Empieza el estilado de la pagina de register*/
 .register {
 	width: 100vw;
 	display: flex;
-	margin-top: 10rem;
+	margin-top: 4rem;
 	flex-direction: column;
 	align-items: center;
-}
-
-.register>h1 {
-	overflow-y: hidden;
 }
 
 .register>h1>span {
@@ -90,29 +85,57 @@ nav img {
 .section-inputs {
 	display: flex;
 	flex-direction: column;
+	gap: 0.4rem;
 }
 
 .section-inputs>label>input {
 	display: block;
+	background-color: #212121;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
+    color: white;
+}
+
+.section-inputs>label>input:hover {
+    background-color: #454045;
+	border: solid 0.1rem #f3f3f4;
+    box-shadow: 0 0 0.5rem #eb50ff4f;
+}
+
+.section-inputs>label>input:focus {
+    background-color: #212121;
+    border: solid 0.1rem #f3f3f4;
+    color: white;
+    box-shadow: 0 0 0.5rem #eb50ff4f;
 }
 
 .section-inputs>button {
-	margin-top: 2rem;
 	max-width: 10rem;
+	background-color: #ea4c89;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
 }
+
+.section-inputs>button:hover {
+    opacity: 0.75;
+}
+
 /* Acaba el estilado de la pagina de register */
 
 /* Empieza el estilado de la pagina de login */
 .login {
 	width: 100vw;
 	display: flex;
-	margin-top: 10rem;
+	margin-top: 4rem;
 	flex-direction: column;
 	align-items: center;
-}
-
-.login>h1 {
-	overflow-y: hidden;
 }
 
 .login>h1>span {
@@ -123,14 +146,56 @@ nav img {
 .section-inputs {
 	display: flex;
 	flex-direction: column;
+	gap: 0.4rem;
 }
 
 .section-inputs>label>input {
 	display: block;
+	background-color: #212121;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    outline: none;
+    transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
+    color: white;
+}
+
+.section-inputs>label>input:hover {
+    background-color: #454045;
+	border: solid 0.1rem #f3f3f4;
+    box-shadow: 0 0 0.5rem #eb50ff4f;
+}
+
+.section-inputs>label>input:focus {
+    background-color: #212121;
+    border: solid 0.1rem #f3f3f4;
+    color: white;
+    box-shadow: 0 0 0.5rem #eb50ff4f;
 }
 
 .section-inputs>button {
-	margin-top: 2rem;
 	max-width: 10rem;
+	background-color: #ea4c89;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
 }
+
+.section-inputs>button:hover {
+    opacity: 0.75;
+}
+
 /* Acaba el estilado de la pagina de login */
+
+/* Empieza el estilado de la pagina de dashboard.php */
+.panel-user {
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100vw;
+	margin-left: 2rem;
+}

@@ -1,5 +1,5 @@
 <nav>
-    <a href="../index.php">
+    <a href="./index.php">
         <img src="./static/img/logo.png" alt="logo">
     </a>
     <ul class="menu-horizontal">
