@@ -1,6 +1,6 @@
 <nav>
     <a href="./index.php">
-        <img src="./static/img/logo.png" alt="logo">
+        <img src="../static/img/logo.png" alt="logo">
     </a>
     <ul class="menu-horizontal">
         <li><a href="./index.php">Home</a></li>
@@ -16,7 +16,7 @@
         </li>
         <li><a href="./about_us.php">¿Quienes somos?</a></li>
         <li><a href="./contact.php">Contacto</a></li>
-        <li><a href="./login.php">Iniciar sesion</a></li>
-        <li><a href="./register.php">Registrase</a></li>
+        <li><a href="./login_page.php">Iniciar sesion</a></li>
+        <li><a href="./register_page.php">Registrase</a></li>
     </ul>
 </nav>

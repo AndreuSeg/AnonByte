@@ -1,12 +1,13 @@
-<?php require "database.php"; ?>
+<?php require "../db/connection.php"; ?>
 
-<?php include("include/header.php"); ?>
+<?php include("../include/header.php"); ?>
 
 <body>
     <nav>
         <a href="./dashboard.php">
-            <img src="./static/img/logo.png" alt="logo">
+            <img src="../static/img/logo.png" alt="logo">
         </a>
+        <a href="../auth/logout.php">Logout</a>
     </nav>
     <div class="padre">
         <div class="panel-user">
@@ -25,4 +26,4 @@
         </div>
     </div>
 
-    <?php include("include/footer.php"); ?>
+    <?php include("../include/footer.php"); ?>
