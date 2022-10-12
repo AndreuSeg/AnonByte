@@ -13,6 +13,7 @@
 
 .padre {
 	height: 100vh;
+	width: 100vw;
 	display: flex;
 	background: rgb(255, 255, 255);
 	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 25%, var(--light_blue) 75%, var(--blue) 100%);
@@ -146,6 +147,18 @@ nav h1 {
 
 .section-inputs>button:hover {
     opacity: 0.75;
+}
+
+.section-inputs>p {
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+}
+
+.section-inputs>p>a {
+	text-decoration: none;
+	font-weight: bold;
 }
 /* Acaba estilado formularios login y registro */
 

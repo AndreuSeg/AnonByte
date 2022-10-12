@@ -23,6 +23,7 @@
                     <input type="password" name="password" id="password" type="password" placeholder="Password" autocomplete="off">
                 </label>
                 <button type="submit">Crear cuenta</button>
+                <p>¿Ya tienes cuenta?<br><a href="./login_page.php">¡Inicia sesión!</a></p>
             </form>
         </div>
     </div>

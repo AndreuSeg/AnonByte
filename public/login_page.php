@@ -15,6 +15,7 @@
                     <input type="password" name="password" id="password" type="password" autocomplete="off">
                 </label>
                 <button type="submit" class="submit-btn">Iniciar sesion</button>
+                <p>¿No eres miembro todavía?<br><a href="./register_page.php">¡Registrate!</a>¡Y empieza ya!</p>
             </form>
         </div>
     </div>
