@@ -2,6 +2,9 @@
     <a href="./index.php">
         <img src="../static/img/logo.png" alt="logo">
     </a>
+    <a href="./index.php">
+        <h1>AnonByte</h1>
+    </a>
     <ul class="menu-horizontal">
         <li><a href="./index.php">Home</a></li>
         <li><a href="./index.php">Servicios <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16">

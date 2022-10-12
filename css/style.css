@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+:root {
+	--blue: rgba(19,107,235, 1);
+	--light_blue: rgba(96, 164, 235, 1);
+}
+
 * {
 	margin: 0;
 	padding: 0;
@@ -10,7 +15,7 @@
 	height: 100vh;
 	display: flex;
 	background: rgb(255, 255, 255);
-	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 25%, rgba(96, 164, 235, 1) 75%, rgba(19, 107, 235, 1) 100%);
+	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 25%, var(--light_blue) 75%, var(--blue) 100%);
 }
 
 nav {
@@ -24,6 +29,15 @@ nav {
 nav img {
 	margin-top: 0.5rem;
 	max-width: 3.8rem;
+}
+
+nav a {
+	text-decoration: none;
+}
+
+nav h1 {
+	color: white;
+	-webkit-text-stroke: 0.15vw var(--light_blue);
 }
 
 .menu-horizontal {
@@ -68,8 +82,8 @@ nav img {
 
 /* Hasta aqui esta estilado del index */
 
-/* Empieza el estilado de la pagina de register*/
-.register {
+/* Empiez estilado formularios login y registro */
+.register, .login {
 	width: 100vw;
 	display: flex;
 	margin-top: 4rem;
@@ -77,118 +91,63 @@ nav img {
 	align-items: center;
 }
 
-.register>h1>span {
-	color: blue;
-	font-weight: bold;
+.register>h1>span, .login>h1>span {
+	color: white;
+	-webkit-text-stroke: 0.15vw var(--light_blue);
 }
 
 .section-inputs {
 	display: flex;
 	flex-direction: column;
-	gap: 0.4rem;
+	width: 20rem;
+}
+
+.section-inputs>label {
+	margin: 0.5rem 0 0.5rem 0;
 }
 
 .section-inputs>label>input {
+	width: 100%;
 	display: block;
-	background-color: #212121;
+	background-color: var(--light_blue);
     border: none;
     padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     outline: none;
-    transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
-    color: white;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    color: rgb(36, 36, 36);
 }
 
-.section-inputs>label>input:hover {
-    background-color: #454045;
-	border: solid 0.1rem #f3f3f4;
-    box-shadow: 0 0 0.5rem #eb50ff4f;
-}
+/* .section-inputs>label>input:hover {
+	border: solid 0.1rem black;
+    box-shadow: 0 0 0.5rem #C5C5C5;
+} */
 
 .section-inputs>label>input:focus {
-    background-color: #212121;
-    border: solid 0.1rem #f3f3f4;
-    color: white;
-    box-shadow: 0 0 0.5rem #eb50ff4f;
+    background-color: var(--light_blue);
+	opacity: 85%;
+    color: rgb(36, 36, 36);
+    box-shadow: 0 0 0.5rem var(--blue);
+	border: none;
 }
 
 .section-inputs>button {
-	max-width: 10rem;
-	background-color: #ea4c89;
+	margin-top: 0.6rem;
+	max-width: 100%;
+	background-color: var(--blue);
     color: white;
     text-align: center;
     cursor: pointer;
     padding: 0.75rem;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
+	font-size: small;
 }
 
 .section-inputs>button:hover {
     opacity: 0.75;
 }
-
-/* Acaba el estilado de la pagina de register */
-
-/* Empieza el estilado de la pagina de login */
-.login {
-	width: 100vw;
-	display: flex;
-	margin-top: 4rem;
-	flex-direction: column;
-	align-items: center;
-}
-
-.login>h1>span {
-	color: blue;
-	font-weight: bold;
-}
-
-.section-inputs {
-	display: flex;
-	flex-direction: column;
-	gap: 0.4rem;
-}
-
-.section-inputs>label>input {
-	display: block;
-	background-color: #212121;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    outline: none;
-    transition: background-color 0.2s, border 0.2s, box-shadow 0.2s;
-    color: white;
-}
-
-.section-inputs>label>input:hover {
-    background-color: #454045;
-	border: solid 0.1rem #f3f3f4;
-    box-shadow: 0 0 0.5rem #eb50ff4f;
-}
-
-.section-inputs>label>input:focus {
-    background-color: #212121;
-    border: solid 0.1rem #f3f3f4;
-    color: white;
-    box-shadow: 0 0 0.5rem #eb50ff4f;
-}
-
-.section-inputs>button {
-	max-width: 10rem;
-	background-color: #ea4c89;
-    color: white;
-    text-align: center;
-    cursor: pointer;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 0.5rem;
-}
-
-.section-inputs>button:hover {
-    opacity: 0.75;
-}
-
-/* Acaba el estilado de la pagina de login */
+/* Acaba estilado formularios login y registro */
 
 /* Empieza el estilado de la pagina de dashboard.php */
 .panel-user {
