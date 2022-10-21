@@ -11,12 +11,16 @@
 	font-family: 'Poppins', sans-serif;
 }
 
-.padre {
+body {
 	height: 100vh;
-	width: 100vw;
-	display: flex;
+	width: auto;
 	background: rgb(255, 255, 255);
 	background: linear-gradient(180deg, rgba(255, 255, 255, 1) 25%, var(--light_blue) 75%, var(--blue) 100%);
+	background-repeat: no-repeat;
+}
+
+.padre {
+	display: flex;
 }
 
 nav {
@@ -118,11 +122,6 @@ nav h1 {
     transition: background-color 0.2s, box-shadow 0.2s;
     color: rgb(36, 36, 36);
 }
-
-/* .section-inputs>label>input:hover {
-	border: solid 0.1rem black;
-    box-shadow: 0 0 0.5rem #C5C5C5;
-} */
 
 .section-inputs>label>input:focus {
     background-color: var(--light_blue);

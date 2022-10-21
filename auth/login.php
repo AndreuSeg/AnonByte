@@ -7,8 +7,10 @@ $error = null;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["email"]) || empty($_POST["password"])) {
         $error = "Please fill all the fileds.";
+        echo $error;
     } else if (!str_contains($_POST["email"], "@")) {
         $error = "Email format is incorrect.";
+        echo $error;
     } else {
         $statement = $conn->prepare("SELECT * FROM users WHERE email = :email LIMIT 1");
         $statement->bindParam(":email", $_POST["email"]);
@@ -16,11 +18,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($statement->rowCount() == 0) {
             $error = "Invalid credentials.";
+            echo $error;
         } else {
             $user = $statement->fetch(PDO::FETCH_ASSOC);
 
             if (!password_verify($_POST["password"], $user["password"])) {
                 $error = "Invalid credentials.";
+                echo $error;
             } else {
                 session_start();
 
