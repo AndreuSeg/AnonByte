@@ -1,17 +1,3 @@
 {
-    "sqltools.connections": [
-        {
-            "mysqlOptions": {
-                "authProtocol": "default"
-            },
-            "previewLimit": 50,
-            "server": "127.0.0.2",
-            "port": 3306,
-            "askForPassword": true,
-            "driver": "MySQL",
-            "name": "AnonByte",
-            "database": "AnonByte",
-            "username": "Andreu"
-        }
-    ]
+    "sqltools.connections": []
 }
