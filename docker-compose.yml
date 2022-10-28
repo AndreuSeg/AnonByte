@@ -4,8 +4,8 @@ services:
     # PHP service
     app:
         build: ./docker/php
-        image: php
-        container_name: php-AnonByte
+        image: php_8_app
+        container_name: app-AnonByte
         working_dir: /var/www/
         volumes:
             - ./project:/var/www
@@ -15,15 +15,12 @@ services:
 
     # MySQL database service
     db:
-        image: mysql
-        container_name: php-Mysql-AnonByte
+        image: mysql:8.0
+        container_name: Mysql-AnonByte
         ports:
             - "3306:3306"
         environment:
             MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
-            MYSQL_DATABASE: ${DB_DATABASE}
-            MYSQL_USER: ${DB_USERNAME}
-            MYSQL_PASSWORD: ${DB_PASSWORD}
         env_file:
             - ./.env
         volumes:
@@ -32,12 +29,14 @@ services:
             - app-network
 
     phpmyadmin:
-        image: phpmyadmin
-        container_name: php-PhpMyAdmin-AnonByte
+        image: phpmyadmin/phpmyadmin
+        container_name: PhpMyAdmin-AnonByte
         environment:
-            PMA_HOST: db
-            PMA_PORT: 3306
+            PMA_HOST: ${DB_HOST}
+            PMA_PORT: ${DB_PORT}
             PMA_ARBITRARY: 1
+        env_file:
+            - ./.env
         restart: always
         ports:
             - 8080:80
@@ -47,9 +46,9 @@ services:
     # Nginx service
     nginx:
         image: nginx
-        container_name: php-nginx-AnonByte
+        container_name: nginx-AnonByte
         ports:
-            - 8000:80
+            - 80:80
         volumes:
             - ./project:/var/www
             - ./docker/nginx/conf.d/:/etc/nginx/conf.d/

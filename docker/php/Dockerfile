@@ -1,4 +1,4 @@
-FROM php:latest
+FROM php:8-fpm-buster
 
 ARG TIMEZONE
 
