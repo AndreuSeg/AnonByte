@@ -1,0 +1,19 @@
+{
+    "name": "andreu/anon-byte",
+    "description": "AnonByte webpage",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Andreu\\AnonByte\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Andreu Seguí",
+            "email": "andreuseguisegura@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}

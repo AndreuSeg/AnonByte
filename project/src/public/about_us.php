@@ -4,7 +4,6 @@
 
 <body>
     <?php include("../include/navbar_index.php"); ?>
-    <div class="padre">
-    </div>
+    <div class="padre"></div>
 
     <?php include("../include/footer.php"); ?>

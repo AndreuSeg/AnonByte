@@ -1,4 +1,7 @@
-.docker
-.log
-.mysql/*
-.vscode
+./.vscode/
+./docker/
+./log/
+./mysql/
+./node_modules/
+./vendor/
+./.env

@@ -7,7 +7,7 @@
     </a>
     <ul class="menu-horizontal">
         <li><a href="../index.php">Home</a></li>
-        <li><a href="../public/about_us">¿Quienes somos?</a></li>
+        <li><a href="../public/about_us.php">¿Quienes somos?</a></li>
         <li><a href="../public/contact.php">Contacto</a></li>
         <li><a href="../public/login_page.php">Iniciar sesion</a></li>
         <li><a href="../public/register_page.php">Registrase</a></li>
