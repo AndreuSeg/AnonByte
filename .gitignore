@@ -1,5 +1,4 @@
 /.vscode/
-docker/
 /log/
 /mysql/
 /node_modules
