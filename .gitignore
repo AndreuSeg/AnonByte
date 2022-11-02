@@ -1,7 +1,8 @@
-./.vscode/
-./docker/
-./log/
-./mysql/
-./node_modules/
-./vendor/
-./.env
+.vscode/
+docker/
+log/
+mysql/
+node_modules/
+vendor/
+.env
+project/src/forms/data.json
