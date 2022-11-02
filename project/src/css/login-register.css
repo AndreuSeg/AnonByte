@@ -1,0 +1,71 @@
+.register, .login {
+    width: 100vw;
+	display: flex;
+	margin-top: 4rem;
+	flex-direction: column;
+	align-items: center;
+}
+
+.register>h1>span, .login>h1>span {
+	color: white;
+	-webkit-text-stroke: 0.05vw var(--light_blue);
+}
+
+.section-inputs {
+	display: flex;
+	flex-direction: column;
+	width: 20rem;
+}
+
+.section-inputs>label {
+	margin: 0.5rem 0 0.5rem 0;
+}
+
+.section-inputs>label>input {
+	width: 100%;
+	background-color: var(--light_blue);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    outline: none;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    color: rgb(36, 36, 36);
+}
+
+.section-inputs>label>input:focus {
+    background-color: var(--light_blue);
+	opacity: 85%;
+    color: rgb(36, 36, 36);
+    box-shadow: 0 0 0.5rem var(--blue);
+	border: none;
+}
+
+.section-inputs>button {
+	margin-top: 0.6rem;
+	max-width: 100%;
+	background-color: var(--myPink);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.3rem;
+	font-size: small;
+}
+
+.section-inputs>button:hover {
+    opacity: 0.75;
+}
+
+.section-inputs>p {
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: column;
+    align-items: center;
+}
+
+.section-inputs>p>a {
+	text-decoration: none;
+	font-weight: bold;
+	color: var(--myPink);
+}

@@ -1,0 +1,91 @@
+.padre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.padre>.home-page {
+    display: flex;
+    flex-direction: row;
+}
+
+.empezar {
+    margin-top: 12rem;
+    margin-left: 20rem;
+}
+
+.empezar>h1 {
+    font-size: 2.2rem;
+    color: white;
+    font-weight: bold;
+}
+
+.empezar>h4 {
+    margin-top: 1rem;
+    color: white;
+}
+
+.empezar button {
+    background-color: var(--myPink);
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 0.3rem;
+	font-size: small;
+}
+
+.padre>.home-page>img {
+    margin: 9rem 14rem;
+    max-width: 20rem;
+    max-height: 20rem;
+}
+
+.padre>.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+    width: 50%;
+}
+
+.padre>.contact-form>.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.padre>.contact-form>.info>input {
+    width: 100%;
+	background-color: var(--light_blue);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    outline: none;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    color: rgb(36, 36, 36);
+}
+
+.padre>.contact-form>.info>button {
+    margin-top: 1rem;
+	max-width: 20%;
+	background-color: var(--myPink);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+	font-size: small;
+}
+
+/* Empieza el estilado de la pagina de dashboard.php */
+.panel-user {
+	display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    width: 100vw;
+	margin-left: 2rem;
+}
