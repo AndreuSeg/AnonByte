@@ -1,7 +1,6 @@
 .padre {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 .padre>.home-page {
@@ -46,12 +45,12 @@
 
 /* Empieza el estilado de la pagina de contact_page.php */
 .padre>.contact-form {
+    font-size: 1.3rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 5rem;
-    width: 50%;
+    margin-top: 10rem;
 }
 
 .padre>.contact-form>.info {
@@ -72,7 +71,7 @@
 
 .padre>.contact-form>.info>button {
     margin-top: 1rem;
-	max-width: 20%;
+	width: 100%;
 	background-color: var(--myPink);
     color: white;
     text-align: center;
@@ -80,7 +79,6 @@
     padding: 0.5rem;
     border: none;
     border-radius: 0.3rem;
-	font-size: small;
 }
 
 /* Empieza el estilado de la pagina de dashboard.php */
@@ -89,6 +87,5 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
-    width: 100vw;
 	margin-left: 2rem;
 }

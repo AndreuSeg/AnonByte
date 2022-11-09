@@ -29,8 +29,3 @@
     </div>
 
     <?php include("../include/footer.php"); ?>
-
-/**
-    * TODO: pagina que te salga si se ha registrado correctamente
-    * TODO: pagina que te salga si no se ha registrado correctamente
- */

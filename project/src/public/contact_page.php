@@ -1,11 +1,14 @@
-<?php require "../db/connection.php"; ?>
+<?php
 
-<?php include("../include/header.php"); ?>
+require "./db/connection.php";
+include("./include/header.php");
+
+?>
 
 <body>
-    <?php include("../include/navbar_index.php"); ?>
+    <?php include("../include/navbar_other.php"); ?>
     <div class="padre">
-        <form class="contact-form" action="../forms/contact.php" method="post">
+        <form class="contact-form" action="" method="post">
             <div class="info">
                 <h1>Contacta con nosotros</h1>
                 <label for="name">Nombre</label>
