@@ -4,6 +4,7 @@ require "./db/connection.php";
 include("./include/header.php");
 
 ?>
+
 <body>
     <?php include("./include/navbar_index.php"); ?>
     <div class="padre">

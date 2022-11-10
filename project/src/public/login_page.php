@@ -7,8 +7,8 @@
             <h1>Inicia sesion en <span>AnonByte</span></h1>
             <form class="section-inputs" action="../auth/login.php" method="POST">
                 <label for="email">
-                    <span>email</span>
-                    <input type="email" name="email" id="email" type="email" placeholder="email" autofocus autocomplete="off">
+                    <span>Email</span>
+                    <input type="email" name="email" id="email" type="email" placeholder="Email" autofocus autocomplete="off">
                 </label>
                 <label for="password">
                     <span>Password</span>

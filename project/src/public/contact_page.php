@@ -1,23 +1,24 @@
-<?php
-
-require "./db/connection.php";
-include("./include/header.php");
-
-?>
+<?php include("../include/header.php"); ?>
 
 <body>
     <?php include("../include/navbar_other.php"); ?>
     <div class="padre">
-        <form class="contact-form" action="" method="post">
+        <form class="contact-form" action="../data/contact.php" method="post">
             <div class="info">
                 <h1>Contacta con nosotros</h1>
-                <label for="name">Nombre</label>
-                <input type="text" name="name" placeholder="Introduce tu nombre aqui">
-                <label for="email">Email</label>
-                <input type="email" name="email" placeholder="Introduce tu email aqui">
-                <label for="message">Consulta</label>
-                <input type="text" name="message" placeholder="Escribe tu consulta aqui">
-                <button type="submit">Enviar</button>
+                <label for="name">
+                    <span>Name</span>
+                    <input type="text" name="name" id="name" type="name" placeholder="Name">
+                </label>
+                <label for="email">
+                    <span>Email</span>
+                    <input type="email" name="email" id="email" type="email" placeholder="Email">
+                </label>
+                <label for="name">
+                    <span>Message</span>
+                    <input type="text" name="message" id="message" type="message" placeholder="Message">
+                </label>
+                <button type="submit" class="submit-btn">Enviar</button>
             </div>
         </form>
     </div>

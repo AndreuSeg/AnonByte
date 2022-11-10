@@ -1,0 +1,44 @@
+.padre>.contact-form {
+    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.padre>.contact-form>.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.padre>.contact-form>.info>h1 {
+    font-size: 3rem;
+}
+
+.padre>.contact-form>.info>label {
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.padre>.contact-form>.info>label>input {
+    width: 100%;
+	background-color: var(--light_blue);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    outline: none;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    color: rgb(36, 36, 36);
+}
+
+.padre>.contact-form>.info>button {
+	margin-top: 0.6rem;
+	width: 100%;
+	background-color: var(--myPink);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.3rem;
+}

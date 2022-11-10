@@ -11,5 +11,7 @@
     <link rel="stylesheet" href="../css/app.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="stylesheet" href="../css/login-register.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
     <title>AnonByte</title>
 </head>

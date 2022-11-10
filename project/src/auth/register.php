@@ -7,10 +7,8 @@ $error = null;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["name"]) || empty($_POST["lastname"]) || empty($_POST["email"]) || empty($_POST["password"])) {
         $error = "Please fill all the fileds.";
-        return $error;
     } else if (!str_contains($_POST["email"], "@")) {
         $error = "Email format is incorrect.";
-        return $error;
     } else {
         $statement = $conn->prepare("SELECT * FROM users WHERE email = :email");
         $statement->bindParam(":email", $_POST["email"]);
@@ -18,7 +16,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($statement->rowCount() > 0) {
             $error = "Invalid credentials.";
-            return $error;
         } else {
             $conn
                 ->prepare("INSERT INTO users (name, lastname, email, password) VALUES (:name, :lastname, :email, :password)")
@@ -41,4 +38,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 }
-?>
