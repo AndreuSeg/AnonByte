@@ -12,19 +12,29 @@ CREATE TABLE users (
     password VARCHAR(255) not null,
     container_id int
 );
+
 CREATE TABLE containers (
     container_id int not null AUTO_INCREMENT PRIMARY KEY,
     container_name VARCHAR(255) not null,
     container_image VARCHAR(255) not null,
-    creation_data VARCHAR(255) not null,
-    status VARCHAR(255) not null,
-    open_ports int not null,
-    command VARCHAR(255) not null
+    network_id int
+);
+
+CREATE TABLE networks (
+    network_id int not null AUTO_INCREMENT PRIMARY KEY,
+    network_name VARCHAR(255) not null
 );
 
 ALTER TABLE users
-   ADD CONSTRAINT FK_Container FOREIGN KEY (container_id)
-      REFERENCES containers (container_id)
-      ON DELETE CASCADE
-      ON UPDATE CASCADE
+    ADD FOREIGN KEY (container_id)
+        REFERENCES containers (container_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
+;
+
+ALTER TABLE containers
+    ADD FOREIGN KEY (network_id)
+        REFERENCES networks (network_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE
 ;

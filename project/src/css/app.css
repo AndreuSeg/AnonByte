@@ -4,6 +4,8 @@
 }
 
 .padre>.home-page {
+    overflow-y: hidden;
+    overflow-x: hidden;
     display: flex;
     flex-direction: row;
 }
@@ -14,18 +16,23 @@
 }
 
 .empezar>h1 {
+    animation: moveTextTittle 3s;
     font-size: 3rem;
     color: white;
     font-weight: bold;
 }
 
-.empezar>h4 {
+.empezar>.animation {
+    animation: moveTextNotTittle 3s;
+}
+
+.empezar>.animation>h4 {
     font-size: 2rem;
     margin-top: 1rem;
     color: white;
 }
 
-.empezar button {
+.empezar>.animation button {
     background-color: var(--myPink);
     text-align: center;
     color: white;
@@ -38,7 +45,53 @@
 }
 
 .padre>.home-page>img {
+    animation: moveImage 3s;
     margin: 9rem 12rem;
     max-width: 25rem;
     max-height: 25rem;
+}
+
+@keyframes moveTextTittle {
+    from {
+        position: relative;
+        right: 100rem;
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    to {
+        position: relative;
+        right: 0;
+        width: 100%;
+    }
+}
+
+@keyframes moveTextNotTittle {
+    from {
+        position: relative;
+        top: 100rem;
+        margin-top: 0%;
+        width: 100%;
+    }
+
+    to {
+        position: relative;
+        top: 0;
+        width: 100%;
+    }
+}
+
+@keyframes moveImage {
+    from {
+        position: relative;
+        left: 100rem;
+        margin-left: 0%;
+        width: 100%;
+    }
+
+    to {
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
 }

@@ -11,10 +11,12 @@ include("./include/header.php");
         <div class="home-page">
             <div class="empezar">
                 <h1>¿Quieres empezar ya <br> y no sabes como?</h1>
-                <h4>Pues registrate ya en AnonByte</h4>
-                <a href="./public/register_page.php"><button type="submit">Empieza ya!</button></a>
+                <div class="animation">
+                    <h4>Pues registrate ya en AnonByte</h4>
+                    <a href="./public/register_page.php"><button type="submit">Empieza ya!</button></a>
+                </div>
             </div>
-            <img src="./static/img/iceberg.png" alt="Iceberg">
+            <img class="iceberg" src="./static/img/iceberg.png" alt="Iceberg">
         </div>
     </div>
 

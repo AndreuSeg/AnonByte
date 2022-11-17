@@ -8,15 +8,15 @@
                 <h1>Contacta con nosotros</h1>
                 <label for="name">
                     <span>Name</span>
-                    <input type="text" name="name" id="name" type="name" placeholder="Name">
+                    <input type="text" name="name" id="name" placeholder="Name">
                 </label>
                 <label for="email">
                     <span>Email</span>
-                    <input type="email" name="email" id="email" type="email" placeholder="Email">
+                    <input type="email" name="email" id="email" placeholder="Email">
                 </label>
                 <label for="name">
                     <span>Message</span>
-                    <input type="text" name="message" id="message" type="message" placeholder="Message">
+                    <input type="text" name="message" id="message" placeholder="Message">
                 </label>
                 <button type="submit" class="submit-btn">Enviar</button>
             </div>

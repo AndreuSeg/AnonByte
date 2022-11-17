@@ -74,3 +74,15 @@
 	font-weight: bold;
 	color: var(--myPink);
 }
+
+.fail {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10rem;
+}
+
+.fail>a {
+    color: var(--myPink);
+}
