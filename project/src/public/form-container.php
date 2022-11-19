@@ -24,8 +24,8 @@ include("../include/header.php");
                 <option class="option" id="php" value="php">php</option>
             </select>
         </div>
-        <form class="servicio" action="">
-        </form>
+        <div class="servicio">
+        </div>
     </div>
 
     <?php include("../include/footer.php"); ?>

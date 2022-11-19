@@ -26,13 +26,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $error = "Invalid credentials.";
                 header("Location: ../public/login_fail.php");
             } else {
+
                 session_start();
 
                 unset($user["password"]);
 
-                $_SESSION["user"] = $user;
+                $_SESSION = $user;
+                $network_id = $_SESSION["network_id"];
 
-                header("Location: ../public/dashboard.php");
+                if ($network_id != null) {
+                    header("Location: ../public/dashboard.php");
+                } else {
+                    header("Location: ../public/create-network-user.php");
+                }
             }
         }
     }

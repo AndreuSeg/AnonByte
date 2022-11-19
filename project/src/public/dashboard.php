@@ -21,9 +21,6 @@ include("../include/header.php");
                     <h2>Tus contenedores</h2>
                     <a href="./form-container.php">Crear contenedor</a>
                 </div>
-                <div class="networks">
-                    <h2>Tus redes</h2>
-                </div>
             </div>
         </div>
     </div>

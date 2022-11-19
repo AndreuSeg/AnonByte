@@ -10,7 +10,8 @@ CREATE TABLE users (
     lastname VARCHAR(255) not null,
     email VARCHAR(255) not null UNIQUE,
     password VARCHAR(255) not null,
-    container_id int
+    container_id int,
+    network_id int
 );
 
 CREATE TABLE containers (
@@ -28,6 +29,10 @@ CREATE TABLE networks (
 ALTER TABLE users
     ADD FOREIGN KEY (container_id)
         REFERENCES containers (container_id)
+        ON DELETE CASCADE
+        ON UPDATE CASCADE,
+    ADD FOREIGN KEY (network_id)
+        REFERENCES networks (network_id)
         ON DELETE CASCADE
         ON UPDATE CASCADE
 ;
