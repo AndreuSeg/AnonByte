@@ -1,29 +1,32 @@
 .padre>.panel-user {
 	display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-items: flex-start;
     justify-content: space-evenly;
+    margin-left: 10rem;
 }
 
-.padre>.panel-user>.user {
+.padre>.panel-user>.containers {
+    background-color: white;
+    border: 0.1rem solid black;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    padding: 2rem;
+}
+
+.padre>.panel-user>.network {
     display: flex;
-    width: 90vw;
-    min-width: 80vw;
-}
-
-.padre>.panel-user>.user>.containers {
+    flex-direction: column;
+    align-items: center;
     background-color: white;
     border: 0.1rem solid black;
+    border-radius: 1rem;
     margin-top: 3rem;
-    padding: 5rem;
+    padding: 0.4rem;
 }
 
-.padre>.panel-user>.user>.networks {
-    background-color: white;
-    border: 0.1rem solid black;
-    margin-top: 3rem;
-    padding: 5rem;
+.padre>.panel-user>.network>.nameNetwork {
+    color: var(--light_blue);
 }
 
 .padre>.opciones {
@@ -77,5 +80,65 @@
 }
 
 .padre>.servicio>button:hover {
+    opacity: 0.75;
+}
+
+.padre2 {
+    display: flex;
+}
+
+.padre2>.tittle {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    margin-top: 18rem;
+    margin-left: 18rem;
+}
+
+.padre2>.section-input {
+    margin-top: 18rem;
+    margin-left: 10rem;
+    font-size: 1.3rem;
+	display: flex;
+	flex-direction: column;
+	width: 30rem;
+}
+
+.padre2>.section-input>label {
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.padre2>.section-input>label>input {
+    width: 100%;
+	background-color: var(--light_blue);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    outline: none;
+    transition: background-color 0.2s, box-shadow 0.2s;
+    color: rgb(36, 36, 36);
+}
+
+.padre2>.section-input>label>input:focus {
+    background-color: var(--light_blue);
+	opacity: 85%;
+    color: rgb(36, 36, 36);
+    box-shadow: 0 0 0.5rem var(--blue);
+	border: none;
+}
+
+.padre2>.section-input>button {
+    margin-top: 0.6rem;
+	width: 100%;
+	background-color: var(--myPink);
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.padre2>.section-input>button:hover {
     opacity: 0.75;
 }

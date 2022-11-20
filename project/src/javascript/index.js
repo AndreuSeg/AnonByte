@@ -10,7 +10,7 @@ function renderForm() {
         case 'nginx':
             const service1 = document.querySelector('.servicio')
             service1.innerHTML = `
-            <form action="">
+            <form action="../containers/nginx.php" method="POST">
                 <div class="section-inputs">
                     <label for="name">
                         <span>Nombre del contenedor</span>
@@ -18,7 +18,7 @@ function renderForm() {
                     </label>
                     <label for="portI">
                         <span>Puerto interior</span>
-                        <input type="num" name="PortI" id="portI" placeholder="Puerto interior: Por defecto 80" autocomplete="off">
+                        <input type="num" name="portI" id="portI" placeholder="Puerto interior: Por defecto 80" autocomplete="off">
                     </label>
                     <label for="portE">
                         <span>Puerto exterior</span>
@@ -36,7 +36,7 @@ function renderForm() {
         case 'mysql':
             const service2 = document.querySelector('.servicio')
             service2.innerHTML = `
-            <form action="">
+            <form action="../containers/mysql.php" method="POST">
                 <div class="section-inputs">
                     <label for="name">
                         <span>Nombre del contenedor</span>
@@ -44,7 +44,7 @@ function renderForm() {
                     </label>
                     <label for="portI">
                         <span>Puerto interior</span>
-                        <input type="num" name="PortI" id="portI" placeholder="Puerto interior: Por defecto 3306" autocomplete="off">
+                        <input type="num" name="portI" id="portI" placeholder="Puerto interior: Por defecto 3306" autocomplete="off">
                     </label>
                     <label for="portE">
                         <span>Puerto exterior</span>
@@ -66,7 +66,7 @@ function renderForm() {
         case 'phpmyadmin':
             const service3 = document.querySelector('.servicio')
             service3.innerHTML = `
-            <form action="">
+            <form action="../containers/phpmyadmin.php" method="POST">
                 <div class="section-inputs">
                     <label for="name">
                         <span>Nombre del contenedor</span>
@@ -74,7 +74,7 @@ function renderForm() {
                     </label>
                     <label for="portI">
                         <span>Puerto interior</span>
-                        <input type="num" name="PortI" id="portI" placeholder="Puerto interior: Por defecto 80" autocomplete="off">
+                        <input type="num" name="oortI" id="portI" placeholder="Puerto interior: Por defecto 80" autocomplete="off">
                     </label>
                     <label for="portE">
                         <span>Puerto exterior</span>
@@ -92,7 +92,7 @@ function renderForm() {
         case 'php':
             const service4 = document.querySelector('.servicio')
             service4.innerHTML = `
-            <form action="">
+            <form action="../containers/php.php" method="POST">
                 <div class="section-inputs">
                     <label for="name">
                         <span>Nombre del contenedor</span>

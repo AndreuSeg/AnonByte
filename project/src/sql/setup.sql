@@ -23,7 +23,7 @@ CREATE TABLE containers (
 
 CREATE TABLE networks (
     network_id int not null AUTO_INCREMENT PRIMARY KEY,
-    network_name VARCHAR(255) not null
+    network_name VARCHAR(255) not null UNIQUE
 );
 
 ALTER TABLE users

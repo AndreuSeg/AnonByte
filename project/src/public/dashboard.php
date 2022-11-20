@@ -3,6 +3,11 @@
 require "../db/connection.php";
 include("../include/header.php");
 
+$statement = $conn->prepare("SELECT network_name FROM networks n INNER JOIN users u ON n.network_id = u.network_id");
+$statement->execute();
+$result = $statement->fetch(\PDO::FETCH_ASSOC);
+$network_name = $result["network_name"];
+
 ?>
 
 <body>
@@ -16,11 +21,13 @@ include("../include/header.php");
     </nav>
     <div class="padre">
         <div class="panel-user">
-            <div class="user">
-                <div class="containers">
-                    <h2>Tus contenedores</h2>
-                    <a href="./form-container.php">Crear contenedor</a>
-                </div>
+            <div class="containers">
+                <h2>Tus contenedores</h2>
+                <a href="./form-container.php">Crear contenedor</a><br>
+            </div>
+            <div class="network">
+                <h2>Tu red propia</h2>
+                <h3 class="nameNetwork"><?php echo $network_name ?></h3>
             </div>
         </div>
     </div>
