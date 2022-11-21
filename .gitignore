@@ -4,3 +4,4 @@
 /node_modules
 /vendor/
 /project/src/forms/data.json
+/.env
