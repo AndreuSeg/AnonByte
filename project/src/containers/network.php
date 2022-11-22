@@ -21,15 +21,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $statement->bindParam(":network_name", $_POST["network_name"]);
             $statement->execute();
 
-            $statement2 = $conn->prepare("SELECT network_id FROM networks WHERE network_name = :network_name");
-            $statement2->bindParam(":network_name", $_POST["network_name"]);
+            session_start();
+            $statement2 = $conn->prepare("SELECT user_id FROM users WHERE name = :name");
+            $statement2->bindParam(":name", $_SESSION["name"]);
             $statement2->execute();
             $result = $statement2->fetch(\PDO::FETCH_ASSOC);
-            $network_id = $result["network_id"];
+            $networkId = $result["user_id"];
 
-            $statement3 = $conn->prepare("UPDATE users SET network_id = $network_id");
+            $statement3 = $conn->prepare("SELECT network_name FROM networks WHERE network_name = :network_name");
+            $statement3->bindParam(":network_name", $_POST["network_name"]);
             $statement3->execute();
+            $result2 = $statement3->fetch(\PDO::FETCH_ASSOC);
+            $networkName = $result2["network_name"];
 
+            $statement4 = $conn->prepare("UPDATE networks SET user_id = $networkId WHERE network_name = '$networkName'");
+            $statement4->execute();
 
             header("Location: ../public/dashboard.php");
         }

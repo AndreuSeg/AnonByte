@@ -74,7 +74,7 @@ function renderForm() {
                     </label>
                     <label for="portI">
                         <span>Puerto interior</span>
-                        <input type="num" name="oortI" id="portI" placeholder="Puerto interior: Por defecto 80" autocomplete="off">
+                        <input type="num" name="portI" id="portI" placeholder="Puerto interior: Por defecto 80" autocomplete="off">
                     </label>
                     <label for="portE">
                         <span>Puerto exterior</span>

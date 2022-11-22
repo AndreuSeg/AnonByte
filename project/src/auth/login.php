@@ -32,9 +32,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 unset($user["password"]);
 
                 $_SESSION = $user;
-                $network_id = $_SESSION["network_id"];
 
-                if ($network_id != null) {
+                $statement2 = $conn->prepare("SELECT n.user_id FROM networks n INNER JOIN users u ON u.user_id = n.user_id");
+                $statement2->execute();
+                $result = $statement2->fetch(\PDO::FETCH_ASSOC);
+                // $userNetwork = $result["network_name"];
+
+                if ($result != false) {
                     header("Location: ../public/dashboard.php");
                 } else {
                     header("Location: ../public/create-network-user.php");

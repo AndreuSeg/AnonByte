@@ -9,26 +9,26 @@ CREATE TABLE users (
     name VARCHAR(255) not null,
     lastname VARCHAR(255) not null,
     email VARCHAR(255) not null UNIQUE,
-    password VARCHAR(255) not null,
-    container_id int,
-    network_id int
+    password VARCHAR(255) not null
 );
 
 CREATE TABLE containers (
     container_id int not null AUTO_INCREMENT PRIMARY KEY,
     container_name VARCHAR(255) not null,
     container_image VARCHAR(255) not null,
-    network_id int
+    network_id int,
+    user_id int
 );
 
 CREATE TABLE networks (
     network_id int not null AUTO_INCREMENT PRIMARY KEY,
-    network_name VARCHAR(255) not null UNIQUE
+    network_name VARCHAR(255) not null UNIQUE,
+    user_id int
 );
 
-ALTER TABLE users
-    ADD FOREIGN KEY (container_id)
-        REFERENCES containers (container_id)
+ALTER TABLE containers
+    ADD FOREIGN KEY (user_id)
+        REFERENCES users (user_id)
         ON DELETE CASCADE
         ON UPDATE CASCADE,
     ADD FOREIGN KEY (network_id)
@@ -37,9 +37,9 @@ ALTER TABLE users
         ON UPDATE CASCADE
 ;
 
-ALTER TABLE containers
-    ADD FOREIGN KEY (network_id)
-        REFERENCES networks (network_id)
+ALTER TABLE networks
+    ADD FOREIGN KEY (user_id)
+        REFERENCES users (user_id)
         ON DELETE CASCADE
         ON UPDATE CASCADE
 ;
