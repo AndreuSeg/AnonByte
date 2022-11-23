@@ -1,18 +1,22 @@
 <?php
 
 require "../db/connection.php";
-include("../include/header.php");
+session_start();
 
-$statement = $conn->prepare("SELECT network_name FROM networks n INNER JOIN users u ON n.network_id = u.network_id");
+$statement = $conn->prepare("SELECT network_name FROM networks n INNER JOIN users u ON n.user_id = u.user_id WHERE n.user_id = :user_id");
+$statement->bindParam(":user_id", $_SESSION["user_id"]);
 $statement->execute();
-$result = $statement->fetch(\PDO::FETCH_ASSOC);
-$networkName = $result["network_name"];
+$result = $statement->fetchAll(\PDO::FETCH_ASSOC);
+for ($i = 0; $i < sizeof($result); $i++) {
+    $networkName = $result[$i]["network_name"];
+}
 
-$statement2 = $conn->prepare("SELECT container_name FROM containers c INNER JOIN users u ON c.container_id = u.container_id");
-$statement2->execute();
-$result = $statement2->fetch(\PDO::FETCH_ASSOC);
-$containerName = $result["container_name"];
+// $statement2 = $conn->prepare("SELECT container_name FROM containers c INNER JOIN users u ON c.container_id = u.container_id");
+// $statement2->execute();
+// $result2 = $statement2->fetch(\PDO::FETCH_ASSOC);
+// $containerName = $result2["container_name"];
 
+include("../include/header.php");
 ?>
 
 <body>
@@ -33,7 +37,11 @@ $containerName = $result["container_name"];
             </div>
             <div class="network">
                 <h2>Tu red propia</h2>
-                <h3 class="nameNetwork"><?php echo $networkName ?></h3>
+                <h3 class="nameNetwork">
+                    <?php
+                        echo $networkName;
+                    ?>
+                </h3>
             </div>
         </div>
     </div>

@@ -16,6 +16,9 @@ CREATE TABLE containers (
     container_id int not null AUTO_INCREMENT PRIMARY KEY,
     container_name VARCHAR(255) not null,
     container_image VARCHAR(255) not null,
+    port_i int,
+    port_e int,
+    MSQL_root_psw VARCHAR(255),
     network_id int,
     user_id int
 );

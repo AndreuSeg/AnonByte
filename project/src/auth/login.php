@@ -33,10 +33,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
                 $_SESSION = $user;
 
-                $statement2 = $conn->prepare("SELECT n.user_id FROM networks n INNER JOIN users u ON u.user_id = n.user_id");
+                $statement2 = $conn->prepare("SELECT n.user_id FROM networks n INNER JOIN users u ON u.user_id = n.user_id WHERE u.user_id = :user_id");
+                $statement2->bindParam(":user_id", $_SESSION["user_id"]);
                 $statement2->execute();
                 $result = $statement2->fetch(\PDO::FETCH_ASSOC);
-                // $userNetwork = $result["network_name"];
 
                 if ($result != false) {
                     header("Location: ../public/dashboard.php");
