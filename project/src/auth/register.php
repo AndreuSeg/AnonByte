@@ -6,7 +6,7 @@ $error = null;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["name"]) || empty($_POST["lastname"]) || empty($_POST["email"]) || empty($_POST["password"])) {
-        $error = "Please fill all the fileds.";
+        $error = "Please fill all the fields.";
         header("Location: ../public/register_fail.php");
     } else if (!str_contains($_POST["email"], "@")) {
         $error = "Email format is incorrect.";

@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $statement3->bindParam(":container_name", $_POST["name"]);
         $statement3->execute();
 
-        $statement4 = $conn->prepare("Select network_id FROM networks n INNER JOIN users u ON n.user_id = u.user_id WHERE n.user_id = :user_id");
+        $statement4 = $conn->prepare("SELECT network_id FROM networks n INNER JOIN users u ON n.user_id = u.user_id WHERE n.user_id = :user_id");
         $statement4->bindParam(":user_id", $_SESSION["user_id"]);
         $statement4->execute();
         $result2 = $statement4->fetch(\PDO::FETCH_ASSOC);
@@ -42,4 +42,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: ../public/dashboard.php");
     }
 }
-session_destroy();

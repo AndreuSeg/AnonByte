@@ -25,7 +25,7 @@ function renderForm() {
                         <input type="num" name="portE" id="portE" placeholder="Puerto exterior: Por defecto 80" autocomplete="off">
                     </label>
                     <label for="${service}">
-                        <span>Version de ${service}</span>
+                        <span>Versión de ${service}</span>
                         <input type="text" name="${service}" id="${service}" placeholder="${service}" autocomplete="off">
                     </label>
                     <button class="btn-container" type="submit">Crear contenedor ${service}</button>
@@ -55,7 +55,7 @@ function renderForm() {
                         <input type="text" name="root-psw" id="root-psw" placeholder="root password" autocomplete="off">
                     </label>
                     <label for="${service}">
-                        <span>Version de ${service}</span>
+                        <span>Versión de ${service}</span>
                         <input type="text" name="${service}" id="${service}" placeholder="${service}" autocomplete="off">
                     </label>
                     <button class="btn-container" type="submit">Crear contenedor ${service}</button>
@@ -81,7 +81,7 @@ function renderForm() {
                         <input type="num" name="portE" id="portE" placeholder="Puerto exterior: Por defecto 80" autocomplete="off">
                     </label>
                     <label for="${service}">
-                        <span>Version de ${service}</span>
+                        <span>Versión de ${service}</span>
                         <input type="text" name="${service}" id="${service}" placeholder="${service}" autocomplete="off">
                     </label>
                     <button class="btn-container" type="submit">Crear contenedor ${service}</button>
@@ -99,7 +99,7 @@ function renderForm() {
                         <input type="text" name="name" id="name" placeholder="Nombre contenedor" autocomplete="off">
                     </label>
                     <label for="${service}">
-                        <span>Version de ${service}</span>
+                        <span>Versión de ${service}</span>
                         <input type="text" name="${service}" id="${service}" placeholder="${service}" autocomplete="off">
                     </label>
                     <button class="btn-container" type="submit">Crear contenedor ${service}</button>
