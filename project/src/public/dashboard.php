@@ -20,16 +20,32 @@ include("../include/header.php");
             <div class="containers">
                 <h2>Tus contenedores</h2>
                 <h3 class="nameContainer">
-                    <?php
-                    $statement = $conn->prepare("SELECT container_name FROM containers c INNER JOIN users u ON c.user_id = u.user_id WHERE c.user_id = :user_id");
-                    $statement->bindParam(":user_id", $_SESSION["user_id"]);
-                    $statement->execute();
-                    $result = $statement->fetchAll(\PDO::FETCH_ASSOC);
-                    for ($i = 0; $i < sizeof($result); $i++) {
-                        $containerName = $result[$i]["container_name"];
-                        echo $containerName. "<br>";
-                    }
-                    ?>
+                    <table class="table-containers">
+                        <tr>
+                            <td class="tittle">Nombre del contenedor</td>
+                            <td class="tittle">Puerto interior</td>
+                            <td class="tittle">Puerto exterior</td>
+                            <td class="tittle">Versión de la imagen</td>
+                        </tr>
+                        <?php
+                        $statement = $conn->prepare("SELECT * FROM containers c INNER JOIN users u ON c.user_id = u.user_id WHERE c.user_id = :user_id");
+                        $statement->bindParam(":user_id", $_SESSION["user_id"]);
+                        $statement->execute();
+                        $result = $statement->fetchAll(\PDO::FETCH_ASSOC);
+                        for ($i = 0; $i < sizeof($result); $i++) {
+                            $containerName = $result[$i]["container_name"];
+                            $containerPortI = $result[$i]["port_i"];
+                            $containerPortE = $result[$i]["port_e"];
+                            $containerVersion = $result[$i]["container_image"];
+                        ?>
+                        <tr>
+                            <td> <?php echo $containerName ?> </td>
+                            <td> <?php echo $containerPortI ?> </td>
+                            <td> <?php echo $containerPortE ?> </td>
+                            <td> <?php echo $containerVersion ?> </td>
+                        </tr>
+                        <?php } ?>
+                    </table>
                 </h3>
                 <a href="./form-container.php">Crear contenedor</a><br>
             </div>

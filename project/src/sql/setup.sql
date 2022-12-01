@@ -18,7 +18,7 @@ CREATE TABLE containers (
     container_image VARCHAR(255) not null,
     port_i int,
     port_e int,
-    MSQL_root_psw VARCHAR(255),
+    MYSQL_root_psw VARCHAR(255),
     network_id int,
     user_id int
 );

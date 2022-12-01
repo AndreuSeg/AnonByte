@@ -12,17 +12,17 @@ function renderForm() {
             service1.innerHTML = `
             <form action="../containers/nginx.php" method="POST">
                 <div class="section-inputs">
-                    <label for="name">
+                    <label for="container_name">
                         <span>Nombre del contenedor</span>
-                        <input type="text" name="name" id="name" placeholder="Nombre contenedor" autocomplete="off">
+                        <input type="text" name="container_name" id="container_name" placeholder="Nombre contenedor" autocomplete="off">
                     </label>
-                    <label for="portI">
+                    <label for="port_i">
                         <span>Puerto interior</span>
-                        <input type="num" name="portI" id="portI" placeholder="Puerto interior: Por defecto 80" autocomplete="off">
+                        <input type="num" name="port_i" id="port_i" placeholder="Puerto interior" autocomplete="off">
                     </label>
-                    <label for="portE">
+                    <label for="port_e">
                         <span>Puerto exterior</span>
-                        <input type="num" name="portE" id="portE" placeholder="Puerto exterior: Por defecto 80" autocomplete="off">
+                        <input type="num" name="port_e" id="port_e" placeholder="Puerto exterior" autocomplete="off">
                     </label>
                     <label for="${service}">
                         <span>Versión de ${service}</span>
@@ -38,21 +38,21 @@ function renderForm() {
             service2.innerHTML = `
             <form action="../containers/mysql.php" method="POST">
                 <div class="section-inputs">
-                    <label for="name">
+                    <label for="container_name">
                         <span>Nombre del contenedor</span>
-                        <input type="text" name="name" id="name" placeholder="Nombre contenedor" autocomplete="off">
+                        <input type="text" name="container_name" id="container_name" placeholder="Nombre contenedor" autocomplete="off">
                     </label>
-                    <label for="portI">
+                    <label for="port_i">
                         <span>Puerto interior</span>
-                        <input type="num" name="portI" id="portI" placeholder="Puerto interior: Por defecto 3306" autocomplete="off">
+                        <input type="num" name="port_i" id="port_i" placeholder="Puerto interior" autocomplete="off">
                     </label>
-                    <label for="portE">
+                    <label for="port_e">
                         <span>Puerto exterior</span>
-                        <input type="num" name="portE" id="portE" placeholder="Puerto exterior: Por defecto 3306" autocomplete="off">
+                        <input type="num" name="port_e" id="port_e" placeholder="Puerto exterior" autocomplete="off">
                     </label>
-                    <label for="root-psw">
+                    <label for="MYSQL_root_psw">
                         <span>MYSQL root password</span>
-                        <input type="text" name="root-psw" id="root-psw" placeholder="root password" autocomplete="off">
+                        <input type="text" name="MYSQL_root_psw" id="MYSQL_root_psw" placeholder="MYSQL root password" autocomplete="off">
                     </label>
                     <label for="${service}">
                         <span>Versión de ${service}</span>
@@ -68,17 +68,17 @@ function renderForm() {
             service3.innerHTML = `
             <form action="../containers/phpmyadmin.php" method="POST">
                 <div class="section-inputs">
-                    <label for="name">
+                    <label for="container_name">
                         <span>Nombre del contenedor</span>
-                        <input type="text" name="name" id="name" placeholder="Nombre contenedor" autocomplete="off">
+                        <input type="text" name="container_name" id="container_name" placeholder="Nombre contenedor" autocomplete="off">
                     </label>
-                    <label for="portI">
+                    <label for="port_i">
                         <span>Puerto interior</span>
-                        <input type="num" name="portI" id="portI" placeholder="Puerto interior: Por defecto 80" autocomplete="off">
+                        <input type="num" name="port_i" id="port_i" placeholder="Puerto interior" autocomplete="off">
                     </label>
-                    <label for="portE">
+                    <label for="port_e">
                         <span>Puerto exterior</span>
-                        <input type="num" name="portE" id="portE" placeholder="Puerto exterior: Por defecto 80" autocomplete="off">
+                        <input type="num" name="port_e" id="port_e" placeholder="Puerto exterior" autocomplete="off">
                     </label>
                     <label for="${service}">
                         <span>Versión de ${service}</span>
@@ -94,9 +94,9 @@ function renderForm() {
             service4.innerHTML = `
             <form action="../containers/php.php" method="POST">
                 <div class="section-inputs">
-                    <label for="name">
+                    <label for="container_name">
                         <span>Nombre del contenedor</span>
-                        <input type="text" name="name" id="name" placeholder="Nombre contenedor" autocomplete="off">
+                        <input type="text" name="container_name" id="container_name" placeholder="Nombre contenedor" autocomplete="off">
                     </label>
                     <label for="${service}">
                         <span>Versión de ${service}</span>

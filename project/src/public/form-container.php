@@ -15,16 +15,25 @@ include("../include/header.php");
         </a>
     </nav>
     <div class="padre">
-        <div class="opciones">
-            <label for="service">Seleciona el servicioque quieres crear</label>
-            <select class="service" name="service" id="service" onclick="servicio(); renderForm()">
-                <option class="option" id="nginx" value="nginx">NGINX</option>
-                <option class="option" id="mysql" value="mysql">MYSQL</option>
-                <option class="option" id="phpmyadmin" value="phpmyadmin">PhpMyAdmin</option>
-                <option class="option" id="php" value="php">php</option>
-            </select>
-        </div>
-        <div class="servicio">
+        <div class="suges-y-form">
+            <div class="sugerencias">
+                <h1>Cosas importantes a tener en cuenta!</h1>
+                <h5>Los puertos por defecto de nginx son: 80, 433</h5>
+                <h5>El puerto por defecto de mysql es: 3306</h5>
+                <h5>PhpMyAdmin, es una aplicación, y normalmente va por el puerto 80, pero si tienes un nginx,
+                    nuestra recomendación seria que le pusieras otro prueto, por ejemplo el peurto 8080</h5>
+            </div>
+            <div class="opciones">
+                <label for="service">Seleciona el servicio que quieres crear</label>
+                <select class="service" name="service" id="service" onclick="servicio(); renderForm()">
+                    <option class="option" id="nginx" value="nginx">NGINX</option>
+                    <option class="option" id="mysql" value="mysql">MYSQL</option>
+                    <option class="option" id="phpmyadmin" value="phpmyadmin">PhpMyAdmin</option>
+                    <option class="option" id="php" value="php">php</option>
+                </select>
+            </div>
+            <div class="servicio">
+            </div>
         </div>
     </div>
 
