@@ -3,6 +3,7 @@
 require "../db/connection.php";
 
 $error = null;
+session_start();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["network_name"])) {

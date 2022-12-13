@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!filesize($nameArchivo) == null) {
             $escribirComa = fputs($crearArchivo, ',');
         }
-        $escribirDatos = fputs($crearArchivo, $passDataToJson);
+        $escribirDatos = fwrite($crearArchivo, $passDataToJson);
         $cerrarArchivo = fclose($crearArchivo);
         header('Location: ../index.php');
     }

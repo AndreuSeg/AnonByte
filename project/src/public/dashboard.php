@@ -18,36 +18,42 @@ include("../include/header.php");
     <div class="padre">
         <div class="panel-user">
             <div class="containers">
-                <h2>Tus contenedores</h2>
+                <h1>Tus contenedores</h1>
                 <h3 class="nameContainer">
-                    <table class="table-containers">
+                    <?php
+                    $statement = $conn->prepare("SELECT * FROM containers c INNER JOIN users u ON c.user_id = u.user_id WHERE c.user_id = :user_id");
+                    $statement->bindParam(":user_id", $_SESSION["user_id"]);
+                    $statement->execute();
+                    $result = $statement->fetchAll(\PDO::FETCH_ASSOC);
+                    if ($result) { ?>
+                        <table class="table-containers">
                         <tr>
-                            <td class="tittle">Nombre del contenedor</td>
-                            <td class="tittle">Puerto interior</td>
-                            <td class="tittle">Puerto exterior</td>
-                            <td class="tittle">Versión de la imagen</td>
+                            <td class="tittle-table">Nombre del contenedor</td>
+                            <td class="tittle-table">Puerto interior</td>
+                            <td class="tittle-table">Puerto exterior</td>
+                            <td class="tittle-table">Versión de la imagen</td>
                         </tr>
                         <?php
-                        $statement = $conn->prepare("SELECT * FROM containers c INNER JOIN users u ON c.user_id = u.user_id WHERE c.user_id = :user_id");
-                        $statement->bindParam(":user_id", $_SESSION["user_id"]);
-                        $statement->execute();
-                        $result = $statement->fetchAll(\PDO::FETCH_ASSOC);
                         for ($i = 0; $i < sizeof($result); $i++) {
                             $containerName = $result[$i]["container_name"];
                             $containerPortI = $result[$i]["port_i"];
                             $containerPortE = $result[$i]["port_e"];
                             $containerVersion = $result[$i]["container_image"];
                         ?>
-                        <tr>
-                            <td> <?php echo $containerName ?> </td>
-                            <td> <?php echo $containerPortI ?> </td>
-                            <td> <?php echo $containerPortE ?> </td>
-                            <td> <?php echo $containerVersion ?> </td>
-                        </tr>
+                            <tr>
+                                <td> <?php echo $containerName ?> </td>
+                                <td> <?php echo $containerPortI ?> </td>
+                                <td> <?php echo $containerPortE ?> </td>
+                                <td> <?php echo $containerVersion ?> </td>
+                            </tr>
                         <?php } ?>
                     </table>
+                    <?php } else { ?>
+                        <h4>No tienes contendedores</h4>
+                    <?php }
+                    ?>
                 </h3>
-                <a href="./form-container.php">Crear contenedor</a><br>
+                <a href="./form-container.php">Crear contenedor</a>
             </div>
             <div class="network">
                 <h2>Tu red propia</h2>

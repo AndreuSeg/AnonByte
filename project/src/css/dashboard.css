@@ -1,23 +1,25 @@
 .padre>.panel-user {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-evenly;
-    margin-left: 10rem;
+    align-items: center;
 }
 
 .padre>.panel-user>.containers {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     background-color: white;
     border: 0.1rem solid black;
     border-radius: 1rem;
     margin-top: 3rem;
     padding: 2rem;
-    width: 90%;
+    width: 60%;
 }
 
 .padre>.panel-user>.network {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: white;
     border: 0.1rem solid black;
@@ -26,8 +28,21 @@
     padding: 0.4rem;
 }
 
-.padre>.panel-user>.network>.nameNetwork {
+/* .padre>.panel-user>.network>.nameNetwork {
     color: var(--light_blue);
+} */
+
+.padre>.suges-y-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.padre>.suges-y-form>.sugerencias {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 70%;
 }
 
 .padre>.opciones {
@@ -157,6 +172,6 @@ td {
     padding: 0.4rem;
 }
 
-.tittle {
+.padre2>.tittle-table {
     background-color: rgb(153, 153, 153);
 }
